@@ -27,7 +27,7 @@ contract Estudiantes{
     }
 
     function curso() public view returns (string memory){ 
-    h
+    
         return _curso;
     }
 
@@ -47,3 +47,20 @@ contract Estudiantes{
             return false;
         }
     }
+
+function promedio () public view returns (uint){
+        uint promediof;
+
+        for(uint i = 0; i < materias.length; i++){
+            promediof += notas_materias[materias[i]];
+
+        }
+        return promediof / materias.length;
+    }
+
+    
+
+}
+
+
+    
